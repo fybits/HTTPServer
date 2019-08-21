@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Privet</title>
+</head>
+<body style="margin: 0; height: 100vh;">
+<h5 style="font-size:50px; margin: 0; position: absolute; user-select: none; -moz-user-select: none;">Good boy</h5>
+
+<canvas style="width: 100%; height: 100%"></canvas>
+<audio autoplay>
+	<source src="/play/tuparest.mp3" type="audio/mpeg">
+</audio>
+<script type="text/javascript">
+
+var canvas = document.querySelector("canvas");
+var ctx = canvas.getContext("2d");
+var welcome = document.querySelector("h5");
+var hour = new Date().getHours();
+
+if (hour < 5) {
+	welcome.textContent = "Good night"; 
+} else if (hour < 12) {
+	welcome.textContent = "Good morning";
+} else if (hour < 17) {
+	welcome.textContent = "Good day";
+} else if (hour <= 23) {
+	welcome.textContent = "Good evening";
+}
+
+var glad = new Image();
+glad.src = "img/glad.png";
+console.log("Try this: setImage(\"hussik\")");
+
+
+class Vector {
+	constructor (x,y) {
+		this.x = x;
+		this.y = y;
+	}
+	distance (vector) {
+		return new Vector(vector.x-this.x,vector.y-this.y).magnitude();
+	}
+	dir (vector) {
+		return new Vector(vector.x-this.x,vector.y-this.y).normalized();
+	}
+	add (vector) {
+		this.x += vector.x;
+		this.y += vector.y;
+	}
+	mult(n) {
+		this.x = this.x*n;
+		this.y = this.y*n;
+	}
+	multiplyed(n) {
+		return new Vector(this.x*n,this.y*n);		
+	}
+	normalized () {
+		return new Vector(this.x/this.magnitude(),this.y/this.magnitude());
+	}
+	magnitude() {
+		return Math.sqrt(this.x*this.x+this.y*this.y);
+	}
+}
+
+var gravityCenter = new Vector(canvas.width/2,canvas.height/2);
+
+class Glad {
+	constructor (x,y) {
+		this.pos = new Vector(x,y);
+		this.vel = new Vector(Math.random()-0.5,Math.random()-0.5);
+		this.size = Math.random()*2+0.2;
+	}
+	
+
+	update () {
+		if (this.pos.x > canvas.width-60*this.size){
+			this.vel.x = -this.vel.x;
+			this.pos.x = canvas.width-60*this.size;
+		}
+		if (this.pos.x < 60*this.size) {
+			this.vel.x = -this.vel.x;
+			this.pos.x = 60*this.size;
+		}
+		if (this.pos.y > canvas.height-60*this.size){
+			this.vel.y = -this.vel.y;
+			this.pos.y = canvas.height-60*this.size;
+		}
+		if (this.pos.y < 60*this.size) {
+			this.vel.y = -this.vel.y;
+			this.pos.y = 60*this.size;
+		}
+		this.vel.mult(0.998);
+		this.pos.add(this.vel.multiplyed(1000/60));
+	}
+
+	toCursor () {
+		var d = this.pos.distance(gravityCenter)
+		if (d > 300) {
+			this.vel.add(this.pos.dir(gravityCenter).multiplyed(0.02));
+		} else {
+			this.vel.add(this.pos.dir(gravityCenter).multiplyed(-5/d));
+		}
+		this.vel.mult(0.99);
+	}
+
+	down () {
+		this.vel.y += 0.05;
+	}
+
+	draw () {
+		ctx.drawImage(glad,this.pos.x-60*this.size, this.pos.y-60*this.size, 120*this.size, 120*this.size);
+	}
+}
+
+
+var valakases = [];
+for (var i = 0; i < 10; i++) {
+	var x = Math.random()*canvas.width*.9;
+	var y = Math.random()*canvas.height*.85;
+	valakases.push(new Glad(x,y));
+}
+
+canvas.onmousemove = function (evt) {
+	gravityCenter = getMousePos(canvas, evt);
+};
+
+canvas.onclick = function(evt) {
+	var mousePos = getMousePos(canvas, evt);
+	var offset = new Vector(Math.random()*2-1,Math.random()*2-1).normalized()
+	offset.mult(50);
+	offset.add(mousePos);
+
+	valakases.push(new Glad(offset.x,offset.y));
+};
+
+var kek1 = false;
+draw();
+function draw () {
+	canvas.width = document.body.clientWidth;
+	canvas.height = document.body.clientHeight;
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	for (var i = 0; i < valakases.length; i++) {
+		valakases[i].update();
+		valakases[i].draw();
+		if (i < valakases.length/2) {
+			valakases[i].down();
+		} else {
+			valakases[i].toCursor();
+		}
+	}
+
+	if (kek1) {
+		ctx.drawImage(glad, canvas.width/2, 50, 1000, 40);
+		ctx.drawImage(glad, 0, canvas.height*0.95, 1000, 40);
+		ctx.drawImage(glad, canvas.width/2, 0, 40, canvas.height*0.95);
+		ctx.drawImage(glad, 0, canvas.height/2, canvas.width*0.95, 40);
+		ctx.drawImage(glad, 0, 0, 40, canvas.height/2);
+		ctx.drawImage(glad, canvas.width-60, canvas.height/2, 40, canvas.height/2);	
+	}
+
+	setTimeout(function() {
+		draw();
+	}, 1000/60);
+}
+
+function populate (n) {
+	for (var i = 0; i < n; i++) {
+		var x = Math.random()*canvas.width*.9;
+		var y = Math.random()*canvas.height*.85;
+		valakases.push(new Glad(x,y));
+	}
+}
+function setImage(name) {
+	if (name == "glad" || name == "hussik")
+		glad.src = "img/"+name+".png";
+	else console.log("Try setImage(\"hussik\") or setImage(\"glad\")");
+}
+
+function svaston() {
+	kek1 = !kek1;
+}
+
+function getMousePos(canvas, evt) {
+	var rect = canvas.getBoundingClientRect();
+	return new Vector((evt.clientX - rect.left),(evt.clientY - rect.top));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+[13:56:31] ===============[Server is listening on 80]===============
+[14:10:16] ::ffff:89.248.174.141 -> /.git/config
+[14:10:16] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/home/fybits/Projects/NodeJS/HTTPServer/.git/config","expose":false,"statusCode":404,"status":404}
+[14:49:00] ::ffff:94.182.43.98 -> /
+[14:49:00] ::ffff:94.182.43.98 <- index.html
+[15:20:14] ::ffff:46.246.252.93 -> /
+[15:20:14] ::ffff:46.246.252.93 <- index.html
+[16:44:49] ::ffff:191.96.110.17 -> /
+[16:44:49] ::ffff:191.96.110.17 <- index.html
+[16:52:44] ::ffff:89.248.174.141 -> /.git/config
+[16:52:44] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/home/fybits/Projects/NodeJS/HTTPServer/.git/config","expose":false,"statusCode":404,"status":404}

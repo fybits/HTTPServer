@@ -1,0 +1,20 @@
+{
+  "name": "http-dolbaeb",
+  "version": "1.0.0",
+  "description": "hui sosi",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "hui"
+  ],
+  "author": "fybits",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4"
+  }
+}
