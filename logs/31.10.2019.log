@@ -1,0 +1,41 @@
+[13:42:45] ===============[Server is listening on 80]===============
+[13:42:53] ===============[Server is listening on 80]===============
+[13:42:57] ::ffff:95.174.98.35 -> /
+[13:42:57] ::ffff:95.174.98.35 <- index.html
+[13:42:57] ::ffff:95.174.98.35 -> /main.css
+[13:42:57] ::ffff:95.174.98.35 <- main.css
+[13:42:57] ::ffff:95.174.98.35 -> /blackguy.png
+[13:42:57] ::ffff:95.174.98.35 -> /telegram.png
+[13:42:57] ::ffff:95.174.98.35 <- blackguy.png
+[13:42:57] ::ffff:95.174.98.35 <- telegram.png
+[13:42:58] ::ffff:95.174.98.35 -> /favicon.ico
+[13:42:58] ::ffff:95.174.98.35 <- favicon.ico
+[13:50:29] ::ffff:95.174.98.35 -> /chill/
+[13:50:29] ::ffff:95.174.98.35 <- chill/index.html
+[13:50:29] ::ffff:95.174.98.35 -> /chill/img/glad.png
+[13:50:29] ::ffff:95.174.98.35 <- chill/img/glad.png
+[13:51:01] ===============[Server is listening on 80]===============
+[14:06:06] ::ffff:95.174.34.42 -> /
+[14:06:06] ::ffff:95.174.34.42 <- index.html
+[17:18:41] ::ffff:185.53.91.65 -> /
+[17:18:41] ::ffff:185.53.91.65 <- index.html
+[18:19:54] ::ffff:36.89.104.185 -> /
+[18:19:54] ::ffff:36.89.104.185 <- index.html
+[19:15:43] ::ffff:194.143.249.66 -> /
+[19:15:43] ::ffff:194.143.249.66 <- index.html
+[20:29:16] ::ffff:5.32.176.110 -> /
+[20:29:16] ::ffff:5.32.176.110 <- index.html
+[21:35:02] ::ffff:94.130.18.151 -> /robots.txt
+[21:35:02] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/robots.txt","expose":false,"statusCode":404,"status":404}
+[21:35:02] ::ffff:94.130.18.151 -> /
+[21:35:02] ::ffff:94.130.18.151 <- index.html
+[21:49:09] ::ffff:185.53.91.21 -> /
+[21:49:09] ::ffff:185.53.91.21 <- index.html
+[22:00:40] ::ffff:122.228.19.80 -> /
+[22:00:40] ::ffff:122.228.19.80 <- index.html
+[22:43:24] ::ffff:143.255.243.104 -> /
+[22:43:24] ::ffff:143.255.243.104 <- index.html
+[23:26:12] ::ffff:77.247.110.63 -> /robots.txt
+[23:26:12] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/robots.txt","expose":false,"statusCode":404,"status":404}
+[23:37:08] ::ffff:103.202.222.0 -> /
+[23:37:08] ::ffff:103.202.222.0 <- index.html

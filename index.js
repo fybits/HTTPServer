@@ -18,7 +18,7 @@ function log(message) {
 	var date = new Date()
 	if (typeof message != 'string')
 		message = JSON.stringify(message);
-	var logFile = fs.appendFile("logs/"+date.toLocaleDateString()+".log","["+date.toLocaleTimeString()+"] "+message+"\n", (error) => {})
+	var logFile = fs.appendFile("logs/"+date.toLocaleDateString('ru')+".log","["+date.toLocaleTimeString('ru')+"] "+message+"\n", (err) => {})
 }
 
 app.get('/play/:key', function(req, res) {

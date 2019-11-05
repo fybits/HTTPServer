@@ -1,0 +1,56 @@
+[0:11:18] ::ffff:77.247.110.54 -> /robots.txt
+[0:11:18] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/robots.txt","expose":false,"statusCode":404,"status":404}
+[1:16:43] ::ffff:77.247.110.63 -> /robots.txt
+[1:16:43] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/robots.txt","expose":false,"statusCode":404,"status":404}
+[1:16:45] ::ffff:187.12.121.34 -> /
+[1:16:45] ::ffff:187.12.121.34 <- index.html
+[1:24:19] ::ffff:77.247.110.63 -> /robots.txt
+[1:24:19] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/robots.txt","expose":false,"statusCode":404,"status":404}
+[1:36:00] ::ffff:77.91.80.235 -> /
+[1:36:00] ::ffff:77.91.80.235 <- index.html
+[2:30:01] ::ffff:114.245.89.138 -> /
+[2:30:01] ::ffff:114.245.89.138 <- index.html
+[3:02:34] ::ffff:152.231.59.36 -> /
+[3:02:34] ::ffff:152.231.59.36 <- index.html
+[4:44:35] ::ffff:45.33.5.240 -> /
+[4:44:35] ::ffff:45.33.5.240 <- index.html
+[5:25:37] ::ffff:77.78.53.155 -> /
+[5:25:37] ::ffff:77.78.53.155 <- index.html
+[16:11:01] ::ffff:106.15.92.0 -> /TP/public/index.php
+[16:11:01] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/TP/public/index.php","expose":false,"statusCode":404,"status":404}
+[16:11:02] ::ffff:106.15.92.0 -> /
+[16:11:02] ::ffff:106.15.92.0 <- index.html
+[17:16:03] ::ffff:45.248.194.227 -> /
+[17:16:03] ::ffff:45.248.194.227 <- index.html
+[18:05:42] ::ffff:128.201.59.214 -> /
+[18:05:42] ::ffff:128.201.59.214 <- index.html
+[19:22:39] ::ffff:79.107.140.100 -> /
+[19:22:39] ::ffff:79.107.140.100 <- index.html
+[20:05:44] ::ffff:77.247.110.63 -> /robots.txt
+[20:05:44] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/robots.txt","expose":false,"statusCode":404,"status":404}
+[20:05:44] ::ffff:77.247.110.63 -> /robots.txt
+[20:05:44] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/robots.txt","expose":false,"statusCode":404,"status":404}
+[20:06:16] ::ffff:106.12.177.122 -> /TP/public/index.php
+[20:06:16] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/TP/public/index.php","expose":false,"statusCode":404,"status":404}
+[20:06:20] ::ffff:106.12.177.122 -> /TP/public/index.php?s=index/\think\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=1
+[20:06:20] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/TP/public/index.php?s=index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=1","expose":false,"statusCode":404,"status":404}
+[20:06:24] ::ffff:106.12.177.122 -> /
+[20:06:24] ::ffff:106.12.177.122 <- index.html
+[21:33:20] ::ffff:177.23.37.55 -> /
+[21:33:20] ::ffff:177.23.37.55 <- index.html
+[22:03:30] ::ffff:5.70.43.19 -> /
+[22:03:30] ::ffff:5.70.43.19 <- index.html
+[22:27:03] ::ffff:5.189.141.4 -> /
+[22:27:03] ::ffff:5.189.141.4 <- index.html
+[22:44:20] ::ffff:77.247.110.54 -> /robots.txt
+[22:44:20] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/robots.txt","expose":false,"statusCode":404,"status":404}
+[23:05:48] ::ffff:173.249.12.113 -> /
+[23:05:48] ::ffff:173.249.12.113 <- index.html
+[23:20:19] ::ffff:77.247.110.81 -> /robots.txt
+[23:20:19] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/robots.txt","expose":false,"statusCode":404,"status":404}
+[23:24:23] ::ffff:128.199.150.109 -> /
+[23:24:23] ::ffff:128.199.150.109 <- index.html
+[23:40:18] ::ffff:207.180.213.88 -> /
+[23:40:18] ::ffff:207.180.213.88 <- index.html
+[23:42:35] ::ffff:207.180.222.40 -> /
+[23:42:35] ::ffff:207.180.222.40 <- index.html
