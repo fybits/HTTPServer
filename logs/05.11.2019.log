@@ -149,3 +149,9 @@
 [22:18:53] ::ffff:95.174.98.35 -> /chill/img/glad.png
 [22:18:53] ::ffff:95.174.98.35 <- chill/img/glad.png
 [22:36:13] ===============[Server is listening on 80]===============
+[22:47:02] ::ffff:198.108.66.80 -> /
+[22:47:02] ::ffff:198.108.66.80 <- index.html
+[22:48:00] ::ffff:1.4.153.2 -> /
+[22:48:00] ::ffff:1.4.153.2 <- index.html
+[23:36:00] ::ffff:77.247.110.54 -> /robots.txt
+[23:36:00] {"errno":-2,"code":"ENOENT","syscall":"stat","path":"/mnt/d/Projects/HTTPServer/robots.txt","expose":false,"statusCode":404,"status":404}
