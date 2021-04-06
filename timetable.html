@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body scroll="no">
+    <link rel="stylesheet" href="http://165.22.28.187/schedule-api/static/styles.css">
+    <div id="schedule">
+        <div class="row">
+            <div style="visibility: hidden; height: 0; margin: 0; padding: 0; width: 200px; " class="input-field" id="input-block">
+                <input placeholder="Введите группу, аудиторию или преподавателя" id="search-field" type="text">
+                <a class="waves-effect indigo waves-light btn" id="search-button">Искать</a>
+            </div>
+            <div id="groupsblock">
+                <div onclick="setGroup(0)" class="boxbtn">2-1</div><div onclick="setGroup(1)" class="boxbtn">2-6</div><div onclick="setGroup(2)" class="boxbtn">2-7</div><div onclick="setGroup(3)" class="boxbtn">2-8</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12" id="list-block"></div>
+        </div>
+        <div class="row content">
+            <div class="col s12 center" id="header-block"></div>
+            <div class="col s12" id="week-block"></div>
+            <div class="col s12" id="table-block"></div>
+            <div id="calendar-link" style="visibility: hidden;"></div>
+        </div>
+    </div>
+    <script src="http://165.22.28.187/schedule-api/static/scripts.js"></script>
+    <script>
+        base_url = 'http://fybits.ddns.net/schedule-api';
+        mappings = ['38.htm', '43.htm', '44.htm', '45.htm']
+        selected = 1;
+        
+        function setGroup(group) {
+            var btns = document.querySelectorAll('.boxbtn')
+            btns[selected].classList.remove('selected')
+            selected = group
+            btns[selected].classList.add('selected')
+            getFromGroup(mappings[selected]);
+        }
+        setGroup(selected)
+    </script>
+</body scroll="no">
+<style>
+    body {
+        background-color: #202225;
+        padding: 0 5%;
+        padding-top: 4%;
+        margin: 0;
+    }
+    * {
+        font-family: sans-serif;
+        color: white;
+        font-weight: 600;
+    }
+    #schedule table.striped > tbody > tr:nth-child(odd) {
+        background-color: #292b2f;
+    }
+    #schedule table.striped > tbody > tr {
+        height: 8vh !important;
+    }
+    #schedule td {
+        border-left: none !important;
+    }
+    #schedule {
+        background-color: #2f3136;
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+        border-radius: 10px;
+        padding-bottom: 10px;
+    }
+    #schedule .chip {
+        /* background-color: #42454a !important; */
+        min-width: 50px;
+        padding: 0;
+        color: #8e9297;
+        text-align: center;
+        font-weight: 600;
+    }
+    #schedule .chip:hover {
+        background-color: #8e9297 !important;
+        color: white;
+        font-weight: 600;
+    }
+    #groupsblock {
+        text-align: center;
+        margin-bottom: -100px;
+        background-color: #202225;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    #table-block {
+        margin-top: 10px;
+    }
+    #schedule table {
+        border: solid rgba(0,0,0,0.3) 1px !important;
+        border-radius: 10px !important;
+    }
+    #schedule thead {
+        background-color: #393c43;
+        border: solid rgba(0,0,0,0.3) 1px !important;
+    }
+    #schedule #table-block table td:first-child {
+        border-left: none !important;
+    }
+    .boxbtn {
+        display: inline-block;
+        line-height: 35px;
+        text-align: start;
+        width: 60px;
+        border-left: solid #393c43 1px;
+        padding-left: 34px;
+    }
+    .boxbtn:hover {
+        background-color: #393c43;
+    }
+    .selected {
+        background-color: #2f3136;
+        border-left: solid #3f51b5 5px;
+        padding-left: 30px;
+    }
+</style>
+</html>

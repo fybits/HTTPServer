@@ -2,6 +2,10 @@
 const express = require('express')
 var bodyParser = require("body-parser")
 var fs = require('fs')
+var request = require('request')
+
+
+
 const app = express()
 const port = 80
 const restricted = [
@@ -61,6 +65,19 @@ app.get('/play/:key', function(req, res) {
     readStream.pipe(res);
 })
 
+app.get('/schedule-api/', (req, res) => {
+	let headers = req.headers
+	let options = {
+		url: 'http://165.22.28.187'+req.url,
+		headers: headers
+	};
+	request(options, (error, response, body) => {
+		if (!error && response.statusCode == 200) {
+			res.send(body);
+		}
+	})
+})
+
 app.get('/*', (request, response) => {
 	log(request.connection.remoteAddress+" -> "+request.url)
 	var filename = request.url.substring(1,request.url.length)
@@ -69,6 +86,7 @@ app.get('/*', (request, response) => {
 	}
 	sendFile(filename, response)
 })
+
 
 function sendFile(filename , response) {
 	var alloy = true
